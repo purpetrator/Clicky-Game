@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/rttV3P1/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mr. Krabs",
+    "image": "https://i.ibb.co/K9Zng01/2.jpg",
+    "occupation": "Restaurant Owner",
+    "location": "A Giant Anchor"
+  },
+  {
+    "id": 3,
+    "name": "Squidward",
+    "image": "https://i.ibb.co/Gp5WX95/3.jpg",
+    "occupation": "Cashier",
+    "location": "An Easter Island Head"
+  },
+  {
+    "id": 4,
+    "name": "Dexter",
+    "image": "https://i.ibb.co/x5md6LY/4.jpg",
+    "occupation": "Boy Genius",
+    "location": "A Secret Laboratory"
+  },
+  {
+    "id": 5,
+    "name": "Courage",
+    "image": "https://i.ibb.co/f0rND9L/5.jpg",
+    "occupation": "A Cowardly Dog",
+    "location": "Nowhere, Kansas"
+  },
+  {
+    "id": 6,
+    "name": "Doug Funnie",
+    "image": "https://i.ibb.co/QrYdTCg/6.jpg",
+    "occupation": "Student",
+    "location": "Bluffington"
+  },
+  {
+    "id": 7,
+    "name": "Bugs Bunny",
+    "image": "https://i.ibb.co/dr7JDt0/7.jpg",
+    "occupation": "Looney Toon",
+    "location": "A Rabbit Burrow"
+  },
+  {
+    "id": 8,
+    "name": "Johnny Bravo",
+    "image": "https://i.ibb.co/JCWLV12/8.jpg",
+    "occupation": "Ladies Man",
+    "location": "Aron City"
+  },
+  {
+    "id": 9,
+    "name": "Tommy Pickles",
+    "image": "https://i.ibb.co/Sxk4Chd/9.jpg",
+    "occupation": "Adventurer",
+    "location": "California"
+  }
+]
