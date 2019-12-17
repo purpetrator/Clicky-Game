@@ -3,7 +3,6 @@ import DogCard from "./components/DogCard";
 import Wrapper from "./components/Wrapper";
 import CardDiv from "./components/CardDiv";
 import Header from "./components/Header";
-
 import Title from "./components/Title";
 import dogs from "./dogs.json";
 // import Counter from "./components/ScoreCounter";
@@ -11,14 +10,15 @@ import dogs from "./dogs.json";
 class App extends Component {
   // Setting this.state.dogs to the dogs json array
   state = {
-    dogs
+    dogs,
+    dogsArray: [],
+    score: 0
   };
 
-  removeFriend = id => {
-    // Filter this.state.dogs for dogs with an id not equal to the id being removed
-    const dogs = this.state.dogs.filter(friend => friend.id !== id);
-    // Set this.state.dogs equal to the new dogs array
-    this.setState({ dogs });
+  // function to increase score
+  increaseScore = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ score: this.state.score + 1 });
   };
 
   // Map over this.state.dogs and render a DogCard component for each friend object
@@ -27,16 +27,16 @@ class App extends Component {
       <Wrapper>
         {/* <Counter /> */}
         <Header>
-          <Title>Dog Clicky Game</Title>
+          <Title>Score: {this.state.score}</Title>
         </Header>
         <CardDiv>
           {this.state.dogs.map(doggy => (
             <DogCard
-              removeFriend={this.removeFriend}
               id={doggy.id}
               key={doggy.id}
               name={doggy.name}
               image={doggy.image}
+              increaseScore={this.increaseScore}
             />
           ))}
         </CardDiv>
@@ -49,6 +49,3 @@ export default App;
 
 // function to shuffle dog cards
 function shuffleDogs() {}
-
-// function to increase score
-function increaseScore() {}
