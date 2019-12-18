@@ -5,38 +5,65 @@ import CardDiv from "./components/CardDiv";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import dogs from "./dogs.json";
-// import Counter from "./components/ScoreCounter";
 
 class App extends Component {
   // Setting this.state.dogs to the dogs json array
   state = {
     dogs,
-    dogsArray: [],
+    dogsClicked: [],
     score: 0
   };
 
   // function to increase score
-  increaseScore = () => {
-    // We always use the setState method to update a component's state
-    this.setState({ score: this.state.score + 1 });
+  increaseScore = dog => {
+    // check each index of dogsClicked array to see if it exists
+    if (this.state.dogsClicked.indexOf(dog.id) > -1) {
+      alert(`you lose`);
+      this.setState({
+        dogs,
+        dogsClicked: [],
+        score: 0
+      });
+    } else {
+      // if it doesn't exist, increase score by 1 and add the dog id to dogsClicked array
+      this.setState({
+        score: this.state.score + 1,
+        dogsClicked: [...this.state.dogsClicked, dog.id]
+      });
+      console.log(this.state.dogsClicked);
+      this.shuffleArray(this.state.dogs);
+    }
   };
 
-  // Map over this.state.dogs and render a DogCard component for each friend object
+  // function to shuffle dogArray
+  shuffleArray = array => {
+    var arraySort = array.sort(() => Math.random() - 0.5);
+    this.setState({ dogs: arraySort });
+  };
+
   render() {
     return (
       <Wrapper>
-        {/* <Counter /> */}
         <Header>
-          <Title>Score: {this.state.score}</Title>
+          <Title>
+            <h3>Clicky Game! </h3>
+            <h4
+              className="title"
+              style={{ maxWidth: "50%", justifyContent: "center" }}
+            >
+              Click the dogs to score points, but don't click more than once!
+            </h4>
+            Score: {this.state.score}
+          </Title>
         </Header>
         <CardDiv>
           {this.state.dogs.map(doggy => (
             <DogCard
               id={doggy.id}
               key={doggy.id}
-              name={doggy.name}
               image={doggy.image}
-              increaseScore={this.increaseScore}
+              clicked={doggy.clicked}
+              increaseScore={() => this.increaseScore(doggy)}
             />
           ))}
         </CardDiv>
@@ -46,6 +73,3 @@ class App extends Component {
 }
 
 export default App;
-
-// function to shuffle dog cards
-function shuffleDogs() {}

@@ -5,9 +5,12 @@ function DogCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        {/* I need an onClick function here to increase the score and shuffle the
-        cards */}
-        <img src={props.image} onClick={props.increaseScore} />
+        <img
+          src={props.image}
+          id={props.id}
+          clicked={props.clicked}
+          onClick={props.increaseScore}
+        />
       </div>
     </div>
   );
