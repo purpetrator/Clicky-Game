@@ -1,10 +1,10 @@
-# Moz Scraper
+# Clicky Game
 
 #### Overview
 
-Clicky Game is a memory game where the player clicks dog cards to earn points. The player must remember which dogs he has clicked, because if he clicks the same dog twice he will lose.
+Clicky Game is a memory game where the player clicks dog cards to earn points. If the same dog is clicked twice, the game is lost.
 
-> Deployed Link: [See Here](#)
+> Deployed Link: [See Here](https://purpetrator.github.io/Clicky-Game/)
 
 > Repository: [See Here](https://github.com/purpetrator/Clicky-Game)
 
