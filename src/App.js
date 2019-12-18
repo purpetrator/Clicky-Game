@@ -33,6 +33,10 @@ class App extends Component {
       console.log(this.state.dogsClicked);
       this.shuffleArray(this.state.dogs);
     }
+
+    if (this.state.score >= 8) {
+      alert(`you win`);
+    }
   };
 
   // function to shuffle dogArray
@@ -47,10 +51,7 @@ class App extends Component {
         <Header>
           <Title>
             <h3 className="game">Clicky Game!</h3>
-            <h4
-              className="title"
-              // style={{ width: "80%", justifyContent: "center" }}
-            >
+            <h4 className="title">
               Click the dogs to score points, but don't click more than once!
             </h4>
             Score: {this.state.score}
