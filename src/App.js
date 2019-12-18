@@ -46,10 +46,10 @@ class App extends Component {
       <Wrapper>
         <Header>
           <Title>
-            <h3>Clicky Game! </h3>
+            <h3 className="game">Clicky Game!</h3>
             <h4
               className="title"
-              style={{ maxWidth: "50%", justifyContent: "center" }}
+              // style={{ width: "80%", justifyContent: "center" }}
             >
               Click the dogs to score points, but don't click more than once!
             </h4>

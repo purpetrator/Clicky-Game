@@ -1,7 +1,12 @@
 .title {
   width: 100%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: white;
   margin-bottom: 50px;
+  font-family: "McLaren", cursive;
+}
+
+.game {
+  font-family: "Skranji", cursive;
 }
