@@ -11,7 +11,8 @@ class App extends Component {
   state = {
     dogs,
     dogsClicked: [],
-    score: 0
+    score: 0,
+    message: ""
   };
 
   // function to increase score
@@ -55,6 +56,7 @@ class App extends Component {
               Click the dogs to score points, but don't click more than once!
             </h4>
             Score: {this.state.score}
+            <div>{this.state.message}</div>
           </Title>
         </Header>
         <CardDiv>
